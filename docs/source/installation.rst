@@ -349,7 +349,7 @@ Installing Delight
 
    .. tab:: General
 
-      For Delight you should be able to just do:
+      Delight is currently not pip installable. You will have to first install Delight follwing this [instruction](https://delight.readthedocs.io/en/latest/install.html), before installing the rail wrapper:
 
       .. code-block:: bash
 
@@ -358,13 +358,13 @@ Installing Delight
 
    .. tab:: Mac
 
-      For Delight you should be able to just do:
+      Delight is currently not pip installable. You will have to first install Delight follwing this [instruction](https://delight.readthedocs.io/en/latest/install.html), before installing the rail wrapper:
 
       .. code-block:: bash
 
           pip install pz-rail-delight
 
-      However, the particular estimator ``Delight`` is built with ``Cython`` and uses ``openmp``.  Mac has dropped native support for ``openmp``, which will likely cause problems when trying to run the ``DelightEstimator`` estimation code in RAIL.  See the notes below for instructions on installing Delight if you wish to use this particular estimator.
+      However, the particular estimator ``Delight`` is built with ``Cython`` and uses ``openmp``, both causing complications when installing on Mac (espacially with M2 chip).Mac has dropped native support for ``openmp``, which will likely cause problems when trying to run the ``DelightEstimator`` estimation code in RAIL.  See the notes below for instructions on installing Delight if you wish to use this particular estimator.
 
       If you are installing RAIL on a Mac, as noted above the ``DelightEstimator`` estimator requires that your machine's ``gcc`` be set up to work with ``openmp``. If you are installing on a Mac and do not plan on using ``DelightEstimator``, then you can simply install RAIL with ``pip install .[base]`` rather than ``pip install .[all]``, which will skip the Delight package.  If you are on a Mac and *do* expect to run ``DelightEstimator``, then follow the instructions `here <https://github.com/LSSTDESC/Delight/blob/master/Mac_installation.md>`_ to install Delight before running ``pip install .[all]``.
 
